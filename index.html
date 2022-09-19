@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/2ca99eed23.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form id="city-search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Search a city"
+                autofocus="on"
+                class="form-control"
+                id="city-search-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                id="current-location-btn"
+                type="submit"
+                value="Current"
+                class="form-control btn btn-success"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="today">
+          <div class="row">
+            <div class="col-4">
+              <h1 id="currentCity"></h1>
+              <ul>
+                <li class="currentDate">Saturday | 2:40 PM</li>
+                <li id="currentWeather"></li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <i class="fa-solid fa-sun sun-icon" id="today-icon"></i>
+            </div>
+            <div class="col-4">
+              <h1>
+                <span class="temperature" id="temperature"></span
+                ><span class="units"
+                  ><a href="#" id="celsius-link">ºC</a> |
+                  <a href="#" id="fahrenheit-link">ºF</a>
+                </span>
+              </h1>
+              <ul>
+                <li>H: 100º | L: 68º</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="six-day">
+          <div class="row">
+            <div class="card col-2">
+              <div class="card-body">
+                <h5 class="card-title">Mon</h5>
+                <br />
+                <i class="fa-solid fa-cloud-sun sun-icon"></i><br /><br />
+                <p class="card-text card-temp">90º</p>
+              </div>
+            </div>
+            <div class="card col-2">
+              <div class="card-body">
+                <h5 class="card-title">Tues</h5>
+                <br />
+                <i class="fa-solid fa-sun cloud-sun-icon"></i><br /><br />
+                <p class="card-text card-temp">87º</p>
+              </div>
+            </div>
+            <div class="card col-2">
+              <div class="card-body">
+                <h5 class="card-title">Wed</h5>
+                <br />
+                <i class="fa-solid fa-cloud-sun-rain sun-rain-icon"></i
+                ><br /><br />
+                <p class="card-text card-temp">85º</p>
+              </div>
+            </div>
+            <div class="card col-2">
+              <div class="card-body">
+                <h5 class="card-title">Thurs</h5>
+                <br />
+                <i class="fa-solid fa-cloud-sun sun-icon"></i><br /><br />
+                <p class="card-text card-temp">92º</p>
+              </div>
+            </div>
+            <div class="card col-2">
+              <div class="card-body">
+                <h5 class="card-title">Fri</h5>
+                <br />
+                <i class="fa-solid fa-cloud-sun cloud-sun-icon"></i><br /><br />
+                <p class="card-text card-temp">87º</p>
+              </div>
+            </div>
+            <div class="card col-2">
+              <div class="card-body">
+                <h5 class="card-title">Sat</h5>
+                <br />
+                <i class="fa-solid fa-cloud-sun sun-icon"></i><br /><br />
+                <p class="card-text card-temp">90º</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"
+      ></script>
+      <script src="src/index.js"></script>
+    </div>
+  </body>
+</html>
