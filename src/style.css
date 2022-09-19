@@ -1,0 +1,51 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+.weather-app {
+  border: 1px solid black;
+  padding: 15px;
+  margin: 20px;
+  max-width: 1000px;
+  border-radius: 8px;
+}
+
+.today {
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.units {
+  font-size: 16px;
+  position: relative;
+  top: -22px;
+}
+
+.high-low {
+  font-size: 18px;
+}
+
+#today-icon {
+  color: #f7e000;
+  font-size: 100px;
+}
+
+.sun-icon,
+.cloud-sun-icon,
+.sun-rain-icon {
+  color: #f7e000;
+  font-size: 80px;
+}
+
+.six-day {
+  text-align: center;
+  padding: 10px;
+}
+
+.card-temp {
+  font-size: 24px;
+}
