@@ -19,6 +19,10 @@ h1 {
   line-height: 26px;
 }
 
+li:first-letter {
+  text-transform: capitalize;
+}
+
 .weather-app-wrapper {
   max-width: 1000px;
   margin: 20px auto;
