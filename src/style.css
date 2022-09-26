@@ -1,17 +1,29 @@
+body {
+  font-family: arial, sans-serif;
+}
+
 ul {
   list-style: none;
-  padding: 0;
+  padding: 2px;
+  color: rgb(112, 117, 122);
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 20px;
 }
 
 h1 {
   font-size: 3rem;
+  color: rgb(32, 33, 36);
+  display: block;
+  font-weight: 400px;
+  line-height: 26px;
 }
 .weather-app {
   border: 1px solid black;
   padding: 15px;
-  margin: 20px;
+  margin: 20px auto;
   max-width: 1000px;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .today {
@@ -23,6 +35,7 @@ h1 {
   font-size: 16px;
   position: relative;
   top: -22px;
+  padding-left: 5px;
 }
 
 .high-low {
