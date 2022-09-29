@@ -48,11 +48,11 @@ li:first-letter {
 
 .units a {
   text-decoration: none;
+  cursor: default;
 }
 
 .units .active {
   color: black;
-  cursor: default;
 }
 
 .units .active:hover {
