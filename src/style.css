@@ -50,6 +50,15 @@ li:first-letter {
   text-decoration: none;
 }
 
+.units .active {
+  color: black;
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
+}
+
 .high-low {
   font-size: 18px;
 }

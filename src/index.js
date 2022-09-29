@@ -26,10 +26,11 @@ let currentTime = new Date();
 currentDate.innerHTML = formatDate(currentTime);
 
 function showTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#currentCity").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document
@@ -75,5 +76,29 @@ function getCurrentLocation(event) {
 
 let currentLocationBtn = document.querySelector("#current-location-btn");
 currentLocationBtn.addEventListener("click", getCurrentLocation);
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);
 
 searchCity("Denver");
