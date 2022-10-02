@@ -25,6 +25,34 @@ let currentDate = document.querySelector(".currentDate");
 let currentTime = new Date();
 currentDate.innerHTML = formatDate(currentTime);
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thur", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+       <div class="weather-forecast-date">${day}</div>
+          <img
+           src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+           alt="Clear"
+           width="36"
+          />
+        <div class="weather-forecast-temp">
+          <span class="weather-forecast-temp-high">18º</span>
+          <span class="weather-forecast-temp-low">12º</span>
+        </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
 
@@ -102,3 +130,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 searchCity("Denver");
+
+showForecast();
