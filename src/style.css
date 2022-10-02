@@ -36,7 +36,7 @@ li:first-letter {
 
 .today {
   text-align: center;
-  padding: 40px 0px;
+  padding: 40px 0px 30px 0px;
 }
 
 .units {
@@ -75,11 +75,19 @@ li:first-letter {
   font-size: 80px;
 }
 
-.six-day {
+.weather-forecast {
   text-align: center;
   padding: 10px;
+  color: #000;
 }
 
-.card-temp {
-  font-size: 24px;
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forecast-temp {
+  font-size: 13px;
+}
+.weather-forecast-temp-low {
+  opacity: 0.5;
 }
