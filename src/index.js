@@ -83,6 +83,12 @@ function showTemperature(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     fahrenheitTemperature
   );
+  document.querySelector("#current-temp-high").innerHTML = Math.round(
+    response.data.main.temp_max
+  );
+  document.querySelector("#current-temp-low").innerHTML = Math.round(
+    response.data.main.temp_min
+  );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document
