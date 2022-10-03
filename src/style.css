@@ -12,7 +12,7 @@ ul {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgb(32, 33, 36);
   display: block;
   font-weight: 400px;
@@ -24,7 +24,7 @@ li:first-letter {
 }
 
 .weather-app-wrapper {
-  max-width: 1000px;
+  max-width: 700px;
   margin: 20px auto;
 }
 
@@ -36,13 +36,13 @@ li:first-letter {
 
 .today {
   text-align: center;
-  padding: 40px 0px 30px 0px;
+  padding: 40px 0px 18px 0px;
 }
 
 .units {
   font-size: 16px;
   position: relative;
-  top: -22px;
+  top: -17px;
   padding-left: 5px;
 }
 
@@ -63,18 +63,6 @@ li:first-letter {
   font-size: 18px;
 }
 
-#today-icon {
-  color: #f7e000;
-  font-size: 100px;
-}
-
-.sun-icon,
-.cloud-sun-icon,
-.sun-rain-icon {
-  color: #f7e000;
-  font-size: 80px;
-}
-
 .weather-forecast {
   text-align: center;
   padding: 10px;
@@ -82,12 +70,28 @@ li:first-letter {
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 18px;
   opacity: 0.5;
 }
 .weather-forecast-temp {
-  font-size: 13px;
+  font-size: 15px;
+}
+
+.weather-forecast-temp-high {
+  position: relative;
+  right: 2px;
 }
 .weather-forecast-temp-low {
   opacity: 0.5;
+  position: relative;
+  left: 2px;
+}
+
+#icon {
+  position: relative;
+  top: -18px;
+}
+
+#open-source-code a {
+  text-decoration: none;
 }
