@@ -64,19 +64,20 @@
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
                   alt="Clear"
+                  width="100"
                   id="icon"
                 />
               </div>
               <div class="col-4">
                 <h1>
                   <span class="temperature" id="temperature"></span
-                  ><span class="units"
-                    ><a href="#" id="celsius-link" class="active">ºC</a> |
-                    <a href="#" id="fahrenheit-link">ºF</a>
-                  </span>
+                  ><span class="units">ºF</span>
                 </h1>
                 <ul>
-                  <li>H: 100º | L: 68º</li>
+                  <li>
+                    H: <span id="current-temp-high">100</span>º | L:
+                    <span id="current-temp-low">68</span>º
+                  </li>
                 </ul>
               </div>
             </div>
